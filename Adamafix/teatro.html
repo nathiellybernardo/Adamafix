@@ -134,12 +134,12 @@
         .container {
             display: flex;
             gap: 20px; 
-            overflow-x: auto; 
+            overflow-x: auto; /* Permite rolagem horizontal */
             padding: 5px;
             width: 100%; 
             margin-top: -100px; 
-            margin-left: 30px; 
-            overflow: hidden;
+            margin-left: 30px;
+            scroll-behavior: smooth; /* Suaviza a rolagem */
         }
 
         .container2 {
@@ -149,12 +149,13 @@
             width: 100%; 
             margin-top: -200px; 
             margin-left: 30px;
-            overflow: hidden;
+            overflow-x: auto; /* Permite rolagem horizontal */
+            scroll-behavior: smooth; /* Suaviza a rolagem */
         }
 
         .container img, .container2 img {
             height: 500px; 
-            max-width: 100%; 
+            width: auto; /* Garante que as imagens se ajustem ao tamanho */
             transition: transform 0.3s; 
         }
 
@@ -222,7 +223,7 @@
             }
 
             .container, .container2 {
-                flex-direction: column;
+                flex-direction: row;
                 margin-top: 0;
                 margin-left: 0;
                 padding: 0;
